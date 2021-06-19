@@ -1,12 +1,12 @@
 <template>
-  <p :class="[createClassColor, createClassSize, createClassWeight]">
+  <h1 :class="[createClassColor, createClassSize, createClassWeight]">
     {{ text }}
-  </p>
+  </h1>
 </template>
 
 <script>
 export default {
-  name: "AtomText",
+  name: "AtomTitle",
   props: {
     text: {
       type: String,
@@ -41,38 +41,26 @@ export default {
 
 <style lang="scss" scoped>
 .color {
-  &-blue {
-    color: $blue-primary;
-  }
-
-  &-yellow {
-    color: $yellow-primary;
-  }
-
   &-black {
     color: $black-primary;
   }
 
-  &-gray-light {
-    color: $gray-light;
-  }
-
-  &-gray-primary {
-    color: $gray-primary;
+  &-white {
+    color: $white-primary;
   }
 }
 
 .size {
-  &-small {
-    font-size: $font-12px;
-  }
-
   &-medium {
-    font-size: $font-14px;
+    font-size: $font-18px;
   }
 
   &-large {
-    font-size: $font-16px;
+    font-size: $font-22px;
+  }
+
+  &-xlarge {
+    font-size: $font-24px;
   }
 }
 
@@ -83,6 +71,10 @@ export default {
 
   &-semibold {
     font-weight: $weight-600;
+  }
+
+  &-bold {
+    font-weight: $weight-700;
   }
 }
 </style>

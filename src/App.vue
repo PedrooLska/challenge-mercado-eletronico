@@ -2,9 +2,9 @@
   <div>
     <AtomText
       :text="'Alooo'"
-      :color="'yellow'"
+      :color="'red'"
       :size="'large'"
-      :weight="'semibold'"
+      :weight="'regular'"
     />
   </div>
 </template>
