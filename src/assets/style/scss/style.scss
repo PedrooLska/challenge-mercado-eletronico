@@ -1,7 +1,13 @@
-@import "./reset";
-@import "./breakpoints";
-@import "./colors";
+@import "./_breakpoints";
+@import "./_colors";
+@import "./_fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
 
 body {
-  background-color: $white-primary;
+  font-family: "Open Sans", sans-serif;
 }
