@@ -41,24 +41,24 @@ export default {
 
 <style lang="scss" scoped>
 .color {
-  &-blue {
+  &-blue-primary {
     color: $blue-primary;
   }
 
-  &-yellow {
+  &-yellow-primary {
     color: $yellow-primary;
-  }
-
-  &-black {
-    color: $black-primary;
-  }
-
-  &-gray-light {
-    color: $gray-light;
   }
 
   &-gray-primary {
     color: $gray-primary;
+  }
+
+  &-black-light {
+    color: $black-light;
+  }
+
+  &-black-primary {
+    color: $black-primary;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <span :class="[icon, createClassColor]"></span>
+  <span class="icon" :class="[icon, createClassColor]"></span>
 </template>
 
 <script>
@@ -24,9 +24,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon {
+  font-size: $font-14px;
+}
+
 .color {
   &-blue-primary {
-    color: $blue-dark;
+    color: $blue-primary;
   }
 
   &-blue-dark {

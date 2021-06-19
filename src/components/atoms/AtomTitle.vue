@@ -41,11 +41,11 @@ export default {
 
 <style lang="scss" scoped>
 .color {
-  &-black {
-    color: $black-primary;
+  &-black-dark {
+    color: $gray-primary;
   }
 
-  &-white {
+  &-white-primary {
     color: $white-primary;
   }
 }
@@ -65,10 +65,6 @@ export default {
 }
 
 .weight {
-  &-regular {
-    font-weight: $weight-400;
-  }
-
   &-semibold {
     font-weight: $weight-600;
   }
