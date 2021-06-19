@@ -15,6 +15,12 @@ module.exports = {
       },
     ],
     quotes: ["error", "double"],
+    "vue/comment-directive": [
+      "error",
+      {
+        reportUnusedDisableDirectives: false,
+      },
+    ],
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
   },
