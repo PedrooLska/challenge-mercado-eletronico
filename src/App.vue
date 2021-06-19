@@ -1,10 +1,10 @@
 <template>
-  <h1 class="text">Projeto</h1>
+  <div>
+    <h1 class="text">asdasd</h1>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-@import "./assets/style/scss/_colors.scss";
-
 .text {
   color: $yellow-primary;
 }
