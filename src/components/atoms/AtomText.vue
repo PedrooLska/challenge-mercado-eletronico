@@ -27,13 +27,13 @@ export default {
   },
   computed: {
     createClassColor() {
-      return `color-${this.color}`;
+      return `color--${this.color}`;
     },
     createClassSize() {
-      return `size-${this.size}`;
+      return `size--${this.size}`;
     },
     createClassWeight() {
-      return `weight-${this.weight}`;
+      return `weight--${this.weight}`;
     },
   },
 };
@@ -41,48 +41,56 @@ export default {
 
 <style lang="scss" scoped>
 .color {
-  &-blue-primary {
+  &--blue-primary {
     color: $blue-primary;
   }
 
-  &-yellow-primary {
+  &--white-primary {
+    color: $white-primary;
+  }
+
+  &--yellow-primary {
     color: $yellow-primary;
   }
 
-  &-gray-primary {
+  &--gray-primary {
     color: $gray-primary;
   }
 
-  &-black-light {
+  &--black-light {
     color: $black-light;
   }
 
-  &-black-primary {
+  &--black-primary {
     color: $black-primary;
   }
 }
 
 .size {
-  &-small {
+  &--small {
     font-size: $font-12px;
   }
 
-  &-medium {
+  &--medium {
     font-size: $font-14px;
   }
 
-  &-large {
+  &--large {
     font-size: $font-16px;
   }
 }
 
 .weight {
-  &-regular {
+  &--regular {
     font-weight: $weight-400;
   }
 
-  &-semibold {
+  &--semibold {
     font-weight: $weight-600;
+  }
+
+  &--boldItalic {
+    font-weight: $weight-700;
   }
 }
 </style>

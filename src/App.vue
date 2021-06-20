@@ -1,38 +1,31 @@
 <template>
   <div>
-    <AtomText
-      :text="'Alooo'"
-      :color="'red'"
-      :size="'large'"
-      :weight="'regular'"
-    />
-
-    <AtomTitle
-      :text="'Alooo'"
-      :color="'yellow'"
-      :size="'large'"
-      :weight="'bold'"
-    />
-
-    <AtomIcon :icon="'fab fa-mailchimp'" :color="'blue-dark'" />
-    <AtomIcon :icon="'fas fa-arrow-left'" />
-    <AtomIcon :icon="'fas fa-arrow-left'" />
-    <AtomBadge :text="'Cheguei aqui'" />
+    <teste />
   </div>
 </template>
 
 <script>
-import AtomText from "./components/atoms/AtomText.vue";
-import AtomTitle from "./components/atoms/AtomTitle.vue";
-import AtomIcon from "./components/atoms/AtomIcon.vue";
-import AtomBadge from "./components/atoms/AtomBadge.vue";
+import teste from "./components/organisms/Header";
 
 export default {
   components: {
-    AtomText,
-    AtomTitle,
-    AtomIcon,
-    AtomBadge,
+    teste,
   },
 };
 </script>
+
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.cardOrder {
+  background-color: $blue-primary;
+}
+</style>

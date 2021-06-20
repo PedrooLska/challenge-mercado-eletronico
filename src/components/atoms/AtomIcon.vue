@@ -29,15 +29,15 @@ export default {
 }
 
 .color {
-  &-blue-primary {
+  &--blue-primary {
     color: $blue-primary;
   }
 
-  &-blue-dark {
+  &--blue-dark {
     color: $blue-dark;
   }
 
-  &-gray-primary {
+  &--gray-primary {
     color: $gray-primary;
   }
 }
