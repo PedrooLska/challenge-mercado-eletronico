@@ -11,7 +11,7 @@
   align-items: center;
   background-color: $white-primary;
   border: solid $blue-dark 2px;
-  border-radius: 50%;
+  border-radius: 50px;
   width: 60px;
   height: 60px;
 

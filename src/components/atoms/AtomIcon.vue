@@ -1,5 +1,13 @@
 <template>
-  <span class="icon" :class="[icon, createClassColor]"></span>
+  <span
+    class="icon"
+    :class="[
+      icon,
+      createClassColor,
+      createClassMarginLeft,
+      createClassMarginRight,
+    ]"
+  ></span>
 </template>
 
 <script>
@@ -14,10 +22,24 @@ export default {
       type: String,
       default: () => "",
     },
+    marginLeft: {
+      type: String,
+      default: () => "",
+    },
+    marginRight: {
+      type: String,
+      default: () => "",
+    },
   },
   computed: {
     createClassColor() {
-      return `color-${this.color}`;
+      return `color--${this.color}`;
+    },
+    createClassMarginLeft() {
+      return `marginLeft--ml-${this.marginLeft}`;
+    },
+    createClassMarginRight() {
+      return `marginRight--mr-${this.marginRight}`;
     },
   },
 };
@@ -39,6 +61,34 @@ export default {
 
   &--gray-primary {
     color: $gray-primary;
+  }
+}
+
+.marginLeft {
+  &--ml-4px {
+    margin-left: 4px;
+  }
+
+  &--ml-8px {
+    margin-left: 8px;
+  }
+
+  &--ml-16px {
+    margin-left: 16px;
+  }
+}
+
+.marginRight {
+  &--mr-4px {
+    margin-right: 4px;
+  }
+
+  &--mr-8px {
+    margin-right: 8px;
+  }
+
+  &--mr-16px {
+    margin-right: 16px;
   }
 }
 </style>

@@ -41,8 +41,8 @@ export default {
 
 <style lang="scss" scoped>
 .color {
-  &--black-dark {
-    color: $gray-primary;
+  &--black-primary {
+    color: $black-primary;
   }
 
   &--white-primary {

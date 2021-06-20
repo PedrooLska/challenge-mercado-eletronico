@@ -1,7 +1,7 @@
 <template>
-  <p :class="[createClassColor, createClassSize, createClassWeight]">
+  <span :class="[createClassColor, createClassSize, createClassWeight]">
     {{ text }}
-  </p>
+  </span>
 </template>
 
 <script>
