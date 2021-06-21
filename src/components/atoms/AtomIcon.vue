@@ -73,6 +73,10 @@ export default {
     margin-left: 8px;
   }
 
+  &--ml-12px {
+    margin-left: 12px;
+  }
+
   &--ml-16px {
     margin-left: 16px;
   }
@@ -85,6 +89,10 @@ export default {
 
   &--mr-8px {
     margin-right: 8px;
+  }
+
+  &--mr-12px {
+    margin-right: 12px;
   }
 
   &--mr-16px {

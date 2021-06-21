@@ -1,7 +1,7 @@
 <template>
   <div class="aboutPurchaseOrder">
     <AtomTitle
-      :text="'USD 20,000.00'"
+      :text="`${currency} ${formatPrice(price)} `"
       :color="'black-primary'"
       :size="'xlarge'"
       :weight="'semibold'"
@@ -15,7 +15,7 @@
     />
 
     <AtomText
-      :text="'Created on 04/16/2020'"
+      :text="`Created on ${formatDate(createAt)}`"
       :color="'black-primary'"
       :size="'medium'"
       :weight="'regular'"
@@ -32,6 +32,28 @@ export default {
     AtomTitle,
     AtomText,
   },
+  computed: {
+    currency() {
+      return this.$store.state.data.header.currency;
+    },
+    price() {
+      return this.$store.state.data.header.price;
+    },
+    createAt() {
+      return this.$store.state.data.header.createdAt;
+    },
+  },
+  methods: {
+    formatPrice(value) {
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(value);
+    },
+    formatDate(value) {
+      return new Date(value).toLocaleDateString();
+    },
+  },
 };
 </script>
 
@@ -39,7 +61,7 @@ export default {
 .aboutPurchaseOrder {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: right;
 }
 </style>

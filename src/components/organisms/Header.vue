@@ -1,17 +1,12 @@
 <template>
   <header class="header">
-    <MoleculeCardOrder
-      class="header__card"
-      :title="'Purchase Order'"
-      :orderNumber="'4510001114'"
-      :serialME="'SerialME 11223344'"
-    />
+    <MoleculeCardOrder class="header__card" />
 
     <AtomLogo class="header__logo" />
 
     <div class="header__about">
-      <Contact />
-      <AboutPurchaseOrder />
+      <MoleculeContact />
+      <MoleculeAboutPurchaseOrder />
     </div>
   </header>
 </template>
@@ -19,15 +14,16 @@
 <script>
 import MoleculeCardOrder from "../molecules/Header/MoleculeCardOrder";
 import AtomLogo from "../atoms/AtomLogo";
-import Contact from "../molecules/Header/MoleculeContact";
-import AboutPurchaseOrder from "../molecules/Header/MoleculeAboutPurchaseOrder.vue";
+import MoleculeContact from "../molecules/Header/MoleculeContact";
+import MoleculeAboutPurchaseOrder from "../molecules/Header/MoleculeAboutPurchaseOrder.vue";
 
 export default {
+  name: "Header",
   components: {
     MoleculeCardOrder,
     AtomLogo,
-    Contact,
-    AboutPurchaseOrder,
+    MoleculeContact,
+    MoleculeAboutPurchaseOrder,
   },
 };
 </script>
@@ -38,8 +34,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 90px;
-  margin-top: 17px;
-  position: absolute;
+  margin-top: 16px;
 
   &__logo {
     position: relative;
@@ -54,8 +49,5 @@ export default {
     margin-left: -20px;
     padding-right: 20px;
   }
-}
-
-@media screen {
 }
 </style>

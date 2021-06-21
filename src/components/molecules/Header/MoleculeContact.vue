@@ -2,7 +2,7 @@
   <div class="contact">
     <div>
       <AtomTitle
-        :text="'MTP West Buyer'"
+        :text="buyer"
         :color="'black-primary'"
         :size="'xlarge'"
         :weight="'semibold'"
@@ -15,12 +15,14 @@
         :color="'blue-dark'"
         :marginRight="'4px'"
       />
+
       <AtomText
-        :text="'Jacksonville Group (Jason Burn)'"
+        :text="name"
         :color="'black-primary'"
         :size="'small'"
         :weight="'regular'"
       />
+
       <AtomIcon
         :icon="'fas fa-info-circle'"
         :color="'blue-primary'"
@@ -35,10 +37,12 @@
         :marginRight="'4px'"
       />
       <AtomText
-        :text="'jacksonvillegroup@me.com'"
+        :text="email"
         :color="'black-primary'"
         :size="'small'"
         :weight="'regular'"
+        :marginLeft="'4px'"
+        :marginRight="'16px'"
       />
 
       <AtomIcon
@@ -48,23 +52,24 @@
         :marginRight="'4px'"
       />
       <AtomText
-        :text="'903-575-3050'"
+        :text="phone"
         :color="'black-primary'"
         :size="'small'"
         :weight="'regular'"
       />
 
       <AtomIcon
-        :icon="'fas fa-phone'"
+        :icon="'fas fa-fax'"
         :color="'blue-dark'"
         :marginLeft="'16px'"
         :marginRight="'4px'"
       />
       <AtomText
-        :text="'999-575-3050'"
+        :text="fax"
         :color="'black-primary'"
         :size="'small'"
         :weight="'regular'"
+        :marginLeft="'4px'"
       />
     </div>
   </div>
@@ -81,6 +86,23 @@ export default {
     AtomTitle,
     AtomText,
   },
+  computed: {
+    buyer() {
+      return this.$store.state.data.header.buyer;
+    },
+    name() {
+      return this.$store.state.data.header.contact.name;
+    },
+    email() {
+      return this.$store.state.data.header.contact.email;
+    },
+    phone() {
+      return this.$store.state.data.header.contact.phone;
+    },
+    fax() {
+      return this.$store.state.data.header.contact.fax;
+    },
+  },
 };
 </script>
 
@@ -88,6 +110,6 @@ export default {
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 </style>

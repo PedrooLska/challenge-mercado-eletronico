@@ -2,21 +2,21 @@
   <div class="cardOrder">
     <div class="cardOrder__text">
       <AtomTitle
-        :text="title"
+        :text="'Purchase Order'"
         :color="'white-primary'"
         :size="'medium'"
         :weight="'semibold'"
       />
 
       <AtomTitle
-        :text="orderNumber"
+        :text="number"
         :color="'white-primary'"
         :size="'large'"
         :weight="'bold'"
       />
 
       <AtomText
-        :text="serialME"
+        :text="`SerialME ${serial}`"
         :color="'white-primary'"
         :size="'small'"
         :weight="'boldItalic'"
@@ -35,18 +35,12 @@ export default {
     AtomTitle,
     AtomText,
   },
-  props: {
-    title: {
-      type: String,
-      default: () => "",
+  computed: {
+    number() {
+      return this.$store.state.data.header.number.toString();
     },
-    orderNumber: {
-      type: String,
-      default: () => "",
-    },
-    serialME: {
-      type: String,
-      default: () => "",
+    serial() {
+      return this.$store.state.data.header.serial.toString();
     },
   },
 };
@@ -58,7 +52,7 @@ export default {
   align-items: center;
   border-radius: 0px 7px 7px 0px;
   width: 200px;
-  height: 89px;
+  height: 90px;
   background-color: $blue-primary;
 
   &__text {

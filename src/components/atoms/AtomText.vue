@@ -24,6 +24,10 @@ export default {
       type: String,
       default: () => "",
     },
+    marginTop: {
+      type: String,
+      default: () => "",
+    },
   },
   computed: {
     createClassColor() {

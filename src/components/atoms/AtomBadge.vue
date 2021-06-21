@@ -16,10 +16,10 @@ export default {
 
 <style lang="scss" scoped>
 .badge {
-  padding: 0.3em 1em;
-  border-radius: 30em;
-  font-size: 12px;
-  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 30px;
+  font-size: $font-12px;
+  font-weight: $weight-600;
   background-color: $blue-lighter;
   color: $gray-light;
 }
